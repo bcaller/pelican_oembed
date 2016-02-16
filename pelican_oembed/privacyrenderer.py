@@ -2,6 +2,7 @@
 
 import os
 
+import errno
 import requests
 from pyembed.core.render import DefaultRenderer
 from re import sub
@@ -63,8 +64,9 @@ class PrivacyRenderer(DefaultRenderer):
                             f.write(chunk)
                     else:
                         raise Exception("Bad HTTP request for thumbnail")
-            except FileExistsError:
-                pass
+            except OSError as e:
+                if e.errno != errno.EEXIST:
+                    raise e
             return self.config.get('OEMBED_THUMBNAIL_URL') % filename
         else:
             return url
