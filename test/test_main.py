@@ -1,5 +1,5 @@
 # Copyright (c) 2016 Ben Caller
-
+import os
 from collections import namedtuple
 import markdown
 import pytest
@@ -150,6 +150,6 @@ def test_thumbnail(url):
         html = md.convert('[!embed](%s)' % list(cache.keys())[0])
 
     assert html == '<p>url/to/upload_wikimedia_org_wikipedia_en_4_48_Blank.JPG</p>'
-    m.assert_called_with('test\\xupload_wikimedia_org_wikipedia_en_4_48_Blank.JPG', 'x+b')
+    m.assert_called_with(os.path.join('test', 'xupload_wikimedia_org_wikipedia_en_4_48_Blank.JPG'), 'x+b')
 
 # TODO test Pelican integration

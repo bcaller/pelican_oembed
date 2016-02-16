@@ -1,7 +1,6 @@
 # Copyright (c) 2016 Ben Caller
 
 import os
-from http.client import HTTPException
 
 import requests
 from pyembed.core.render import DefaultRenderer
@@ -63,7 +62,7 @@ class PrivacyRenderer(DefaultRenderer):
                         for chunk in r:
                             f.write(chunk)
                     else:
-                        raise HTTPException
+                        raise Exception("Bad HTTP request for thumbnail")
             except FileExistsError:
                 pass
             return self.config.get('OEMBED_THUMBNAIL_URL') % filename
