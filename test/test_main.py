@@ -141,7 +141,7 @@ def test_thumbnail(url):
         'OUTPUT_PATH': 'test',
         '_OEMBED_CACHE': cache,
         'OEMBED_VIDEO_FORMAT': '%(thumbnail_url)s',
-        'OEMBED_THUMBNAIL_SAVE_AS': 'x%s',
+        'OEMBED_THUMBNAIL_SAVE_AS': 'cassettes/%s',
         'OEMBED_THUMBNAIL_URL': 'url/to/%s'
     })
     md = markdown.Markdown(extensions=[CachingPyEmbedMarkdownExtension(cache=cache, renderer=renderer)])
@@ -150,6 +150,6 @@ def test_thumbnail(url):
         html = md.convert('[!embed](%s)' % list(cache.keys())[0])
 
     assert html == '<p>url/to/upload_wikimedia_org_wikipedia_en_4_48_Blank.JPG</p>'
-    m.assert_called_with(os.path.join('test', 'xupload_wikimedia_org_wikipedia_en_4_48_Blank.JPG'), 'x+b')
+    m.assert_called_with(os.path.join('test', 'cassettes/upload_wikimedia_org_wikipedia_en_4_48_Blank.JPG'), 'x+b')
 
 # TODO test Pelican integration

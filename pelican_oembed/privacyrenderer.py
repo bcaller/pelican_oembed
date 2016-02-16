@@ -55,11 +55,13 @@ class PrivacyRenderer(DefaultRenderer):
         thumbnail_path = os.path.join(self.config.get('OUTPUT_PATH'), save_path % filename)
 
         if thumbnail_path is not None:
+            thumbnail_dir = os.path.join(self.config.get('OUTPUT_PATH'), save_path % "")
+            if not os.path.isdir(thumbnail_dir):
+                os.makedirs(thumbnail_dir)
             try:
                 with open(thumbnail_path, 'x+b') as f:
                     r = requests.get(url, stream=True)
                     if r.status_code == 200:
-                        os.makedirs(os.path.dirname(thumbnail_path), exist_ok=True)
                         for chunk in r:
                             f.write(chunk)
                     else:
