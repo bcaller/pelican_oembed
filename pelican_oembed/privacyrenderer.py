@@ -55,9 +55,7 @@ class PrivacyRenderer(DefaultRenderer):
         thumbnail_path = os.path.join(self.config.get('OUTPUT_PATH'), save_path % filename)
 
         if thumbnail_path is not None:
-            thumbnail_dir = os.path.join(self.config.get('OUTPUT_PATH'), save_path % "")
-            if not os.path.isdir(thumbnail_dir):
-                os.makedirs(thumbnail_dir)
+            self._make_directories()
             try:
                 with open(thumbnail_path, 'x+b') as f:
                     r = requests.get(url, stream=True)
@@ -67,7 +65,7 @@ class PrivacyRenderer(DefaultRenderer):
                     else:
                         raise Exception("Bad HTTP request for thumbnail")
             except OSError as e:
-                if e.errno != errno.EEXIST:
+                if e.errno != errno.EEXIST:  # Thumbnail exists already, so no need to re-download
                     raise e
             return self.config.get('OEMBED_THUMBNAIL_URL') % filename
         else:
@@ -76,3 +74,11 @@ class PrivacyRenderer(DefaultRenderer):
     def _save_to_cache(self, url, params):
         if self.config.get('_OEMBED_CACHE') is not None:
             self.config['_OEMBED_CACHE'][url] = params.copy()
+
+    def _make_directories(self):
+        thumbnail_dir = os.path.join(self.config.get('OUTPUT_PATH'), self.config.get('OEMBED_THUMBNAIL_SAVE_AS') % "")
+        try:
+            os.makedirs(thumbnail_dir)
+        except OSError as exception:
+            if exception.errno != errno.EEXIST:  # Directory already exists :)
+                raise
