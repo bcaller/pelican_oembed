@@ -3,6 +3,8 @@ Python Pelican extension for embedding content using OEmbed in Markdown
 
 Embed any [oembed](http://www.oembed.com/) content with the `[!embed](url)` tag.
 
+[![travis](https://travis-ci.org/bcaller/pelican_oembed.svg)](https://travis-ci.org/bcaller/pelican_oembed)
+
 ## Photos and rich html
 
 Embeddable content could be Flickr photos, Twitter statuses or Youtube videos ([list of services](http://www.oembed.com/)).
