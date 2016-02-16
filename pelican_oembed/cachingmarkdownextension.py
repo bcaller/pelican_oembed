@@ -1,3 +1,5 @@
+# Copyright (c) 2016 Ben Caller
+
 from markdown.extensions import Extension
 from pyembed.core import PyEmbed
 from pyembed.markdown.pattern import PyEmbedPattern

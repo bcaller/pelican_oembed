@@ -1,3 +1,5 @@
+# Copyright (c) 2016 Ben Caller
+
 import os
 from http.client import HTTPException
 

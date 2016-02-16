@@ -1,3 +1,5 @@
+# Copyright (c) 2016 Ben Caller
+
 from collections import namedtuple
 import markdown
 import pytest
