@@ -1,0 +1,52 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.5.3 CPython/3.4.3 Windows/8]
+    method: GET
+    uri: https://upload.wikimedia.org/wikipedia/en/4/48/Blank.JPG
+  response:
+    body:
+      string: !!binary |
+        /9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+        HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+        MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAABAAEDASIA
+        AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+        AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+        ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+        p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+        AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+        BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+        U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+        uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iii
+        gD//2Q==
+    headers:
+      Accept-Ranges: [bytes]
+      Access-Control-Allow-Origin: ['*']
+      Access-Control-Expose-Headers: ['Age, Date, Content-Length, Content-Range, X-Content-Duration,
+          X-Cache, X-Varnish']
+      Age: ['43544']
+      Connection: [keep-alive]
+      Content-Length: ['631']
+      Content-Type: [image/jpeg]
+      Date: ['Tue, 16 Feb 2016 16:03:40 GMT']
+      Etag: [d68e763c825dc0e388929ae1b375ce18]
+      Last-Modified: ['Tue, 22 Apr 2014 12:48:11 GMT']
+      Server: [nginx/1.9.4]
+      Set-Cookie: ['WMF-Last-Access=16-Feb-2016;Path=/;HttpOnly;Expires=Sat, 19 Mar
+          2016 12:00:00 GMT']
+      Strict-Transport-Security: [max-age=31536000]
+      Timing-Allow-Origin: ['*']
+      Via: ['1.1 varnish, 1.1 varnish, 1.1 varnish']
+      X-Analytics: [https=1;nocookies=1]
+      X-Cache: ['cp1050 hit(98), cp3042 hit(261), cp3035 frontend miss(0)']
+      X-Client-IP: [92.18.144.180]
+      X-Object-Meta-Sha1base36: [e664xyyfn8e2d7h7u2e12n2aet75vhn]
+      X-Timestamp: ['1398170890.06451']
+      X-Trans-Id: [tx8db9153da4674be3af53d-0056c29e44]
+      X-Varnish: ['1821653357 1771400905, 397989521 321128027, 776603707']
+    status: {code: 200, message: OK}
+version: 1

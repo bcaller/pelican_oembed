@@ -1,0 +1,99 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      User-Agent: [python-requests/2.5.3 CPython/3.4.3 Windows/8]
+    method: GET
+    uri: http://www.flickr.com/services/oembed/?url=https%3A%2F%2Fwww.flickr.com%2Fphotos%2Fbees%2F2362225867%2F&format=json
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAAwMAAAAAAAAAAAA=
+    headers:
+      Age: ['0']
+      Cache-Control: [private]
+      Connection: [keep-alive]
+      Content-Encoding: [gzip]
+      Content-Length: ['20']
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Tue, 16 Feb 2016 03:49:09 GMT']
+      Location: ['https://www.flickr.com/services/oembed/?url=https%3A%2F%2Fwww.flickr.com%2Fphotos%2Fbees%2F2362225867%2F&format=json']
+      P3P: ['policyref="https://policies.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR
+          ADM DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi
+          IND PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"']
+      Server: [ATS]
+      Set-Cookie: ['xb=402241; expires=Fri, 16-Feb-2018 03:49:09 GMT; path=/; domain=.flickr.com']
+      Vary: [Accept-Encoding]
+      Via: ['http/1.1 fts116.flickr.bf1.yahoo.com (ApacheTrafficServer [cMsSf ]),
+          http/1.1 r06.ycpi.loa.yahoo.net (ApacheTrafficServer [cMsSf ])']
+      X-Served-By: [www-bm006.flickr.bf1.yahoo.com]
+      Y-Trace: [BAEAQAAAAAB7elNeMieXGgAAAAAAAAAAT_kqxl3KcfkAAAAAAAAAAAAFK9sEE7FRAAUr2wQVbVg3Yzr2AAAAAA--]
+    status: {code: 301, message: Moved Permanently}
+- request:
+    body: null
+    headers:
+      Accept: ['*/*']
+      Accept-Encoding: ['gzip, deflate']
+      Connection: [keep-alive]
+      Cookie: [xb=402241]
+      User-Agent: [python-requests/2.5.3 CPython/3.4.3 Windows/8]
+    method: GET
+    uri: https://www.flickr.com/services/oembed/?url=https%3A%2F%2Fwww.flickr.com%2Fphotos%2Fbees%2F2362225867%2F&format=json
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA51TTW/bMAy971cIOje267hJEGQB2sMu26lnAYYs05Fa+aMSnSAY9t9Hye2SJsCG
+        5WL4keLj4xP1k+NxAL7mg+6x53e8sUa9uvIiigZtwE9S9R370Vt79BSWI+relZ1sQ1KMeZZD/Nbx
+        qyoAP/2dDo/O0lmNOPi1SEV6OBySqWmi+laksaUXaaxNqe5gatRUcp/lBUENZqeR8HKxInhJ10jX
+        FolHiUad086zIhNpPl/kef6wWizLQq6WslpVsimr5GXYhU5QlYPcwX/oOxFGrajHtuqksVdj3qLr
+        7V3XifXdi/uH7Dz6YUkMfwxRenIbr3VQ7+TV0RwiLR6/5z5cDcWg82HuR2vZc2Dz7Bk8uD3Up3xp
+        ar6mFhrbQLqRrJYoZ9M4M2grqL8Kjm4EwZl20BC6xUiqjgtH5ecLx6oj+9uO3TE6+i12EHy7Me2O
+        eac+abh5O0hS9J7Ywh6G+aLphGkPCUqLF3KDBpHK7cYrZwZk0h87daUouuY+GSO9ByRLlDXQ4Uz1
+        NSQvRMeUlo5SVD9iM1tNDSb2Ld3SHpw3fReeSpIRVlJpKOM+zxcZ3dvg+r2p4c+DnbziZ4l/PU7+
+        68tvQgm2zzIEAAA=
+    headers:
+      Age: ['0']
+      Cache-Control: [private]
+      Connection: [keep-alive]
+      Content-Encoding: [gzip]
+      Content-Length: ['467']
+      Content-Type: [application/json]
+      Date: ['Tue, 16 Feb 2016 03:49:11 GMT']
+      P3P: ['policyref="https://policies.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR
+          ADM DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi
+          IND PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"']
+      Server: [ATS]
+      Set-Cookie: ['localization=en-us%3Buk%3Bgb; expires=Tue, 13-Feb-2018 03:49:11
+          GMT; path=/; domain=.flickr.com', 'flrbp=1455594551-9722cc3208b3c0441413092f0693b1e55855873d;
+          expires=Sun, 14-Aug-2016 03:49:11 GMT; path=/; domain=.flickr.com; httponly',
+        'flrbrp=1455594551-47867e419f01fd1a3b09cfa12fec7d82f88dc54e; expires=Sun,
+          14-Aug-2016 03:49:11 GMT; path=/; domain=.flickr.com; httponly', 'flrbs=1455594551-9d66471ad033f85bf76ea21403a9a6318677ad26;
+          expires=Sun, 14-Aug-2016 03:49:11 GMT; path=/; domain=.flickr.com; httponly',
+        'flrbra=1455594551-c7ef5b9ac82e01bf89775f2d3770ca6fce802747; expires=Sun,
+          14-Aug-2016 03:49:11 GMT; path=/; domain=.flickr.com; httponly', 'flrbrf=1455594551-4b589b51a1121ffc1bcb2216fcc60918dc1fa1fe;
+          expires=Sun, 14-Aug-2016 03:49:11 GMT; path=/; domain=.flickr.com; httponly',
+        'flrbgrp=1455594551-fdf78980dd89578ab19ebe3075291927b449083f; expires=Sun,
+          14-Aug-2016 03:49:11 GMT; path=/; domain=.flickr.com; httponly', 'flrbgdrp=1455594551-df32d880ebc4e63b793a9ff9ec8b4dca55c281fe;
+          expires=Sun, 14-Aug-2016 03:49:11 GMT; path=/; domain=.flickr.com; httponly',
+        'flrbgmrp=1455594551-5dac02d5daf6a3e3133066e28e7c118c5f6d5e30; expires=Sun,
+          14-Aug-2016 03:49:11 GMT; path=/; domain=.flickr.com; httponly', 'flrbre=1455594551-60ca3529185248b9c338eb0de2d3fc07635c1c8a;
+          expires=Sun, 14-Aug-2016 03:49:11 GMT; path=/; domain=.flickr.com; httponly',
+        'flrbras=1455594551-7d0b13cc29b4c43db4e3aceb2d6e62c0b81656aa; expires=Sun,
+          14-Aug-2016 03:49:11 GMT; path=/; domain=.flickr.com; httponly', 'flrbrgs=1455594551-d36b2c04d7562d7168735bd0949e83e7ba4404c1;
+          expires=Sun, 14-Aug-2016 03:49:11 GMT; path=/; domain=.flickr.com; httponly',
+        'flrbrps=1455594551-3e175091912ed6faaada4aa45725bbebcb839e5b; expires=Sun,
+          14-Aug-2016 03:49:11 GMT; path=/; domain=.flickr.com; httponly', 'flrbcr=1455594551-2a9ca62e35313c99aeec80ef40673613614aa8af;
+          expires=Sun, 14-Aug-2016 03:49:11 GMT; path=/; domain=.flickr.com; httponly',
+        'flrbrst=1455594551-b74bf4e281fcc71557e2351bd698b753d7b32da7; expires=Sun,
+          14-Aug-2016 03:49:11 GMT; path=/; domain=.flickr.com; httponly', 'flrb=53;
+          expires=Tue, 16-Feb-2016 04:49:11 GMT; path=/; domain=.flickr.com; httponly']
+      Vary: [Accept-Encoding]
+      Via: ['http/1.1 fts114.flickr.bf1.yahoo.com (ApacheTrafficServer [cMsSf ]),
+          http/1.1 r01.ycpi.loa.yahoo.net (ApacheTrafficServer [cMsSf ])']
+      X-Served-By: [www-bm022.flickr.bf1.yahoo.com]
+      Y-Trace: [BAEAQAAAAAC4MCeNiubg9gAAAAAAAAAA8fpu6MOnKesAAAAAAAAAAAAFK9sEJ.EZAAUr2wQp9WREVCcOAAAAAA--]
+    status: {code: 200, message: OK}
+version: 1
