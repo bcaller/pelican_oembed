@@ -24,6 +24,7 @@ setup(
     description='Python Pelican extension for embedding content using OEmbed',
     packages=['pelican_oembed'],
     install_requires=[
+        'pelican',
         'pyembed_markdown',
         'markdown'
     ],
