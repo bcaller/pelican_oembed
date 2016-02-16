@@ -1,0 +1,15 @@
+.oembed-holder {
+    position: relative;
+    cursor: pointer;
+}
+
+.oembed-holder .preview-click {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    font-size: 100px;
+    margin-top: -50px;
+    color: #BF1D15;
+}
