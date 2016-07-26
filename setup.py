@@ -1,6 +1,7 @@
+import sys
+
 from setuptools import setup
 from setuptools.command.test import test as TestCommand
-import sys
 
 
 class PyTest(TestCommand):
@@ -18,7 +19,7 @@ class PyTest(TestCommand):
 
 setup(
     name='pelican_oembed',
-    version='1.0.0',
+    version='1.7.0',
     author='Ben Caller',
     author_email='bcaller [at] gmail',
     description='Python Pelican extension for embedding content using OEmbed',
@@ -26,7 +27,8 @@ setup(
     install_requires=[
         'pelican',
         'pyembed_markdown',
-        'markdown'
+        'markdown',
+        'requests'
     ],
     tests_require=[
         'mock',

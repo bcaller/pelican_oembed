@@ -1,15 +1,17 @@
 # Copyright (c) 2016 Ben Caller
 import os
 from collections import namedtuple
+from sys import version_info
+
 import markdown
 import pytest
 import vcr
 from mock import mock_open, patch
 from pyembed.markdown import PyEmbedMarkdown
+
 from pelican_oembed.cachingmarkdownextension import CachingPyEmbedMarkdownExtension
 from pelican_oembed.privacyrenderer import PrivacyRenderer
 
-from sys import version_info
 if version_info.major == 2:
     import __builtin__ as builtins  # pylint:disable=import-error
 else:
@@ -151,5 +153,6 @@ def test_thumbnail(url):
 
     assert html == '<p>url/to/upload_wikimedia_org_wikipedia_en_4_48_Blank.JPG</p>'
     m.assert_called_with(os.path.join('test', 'cassettes/upload_wikimedia_org_wikipedia_en_4_48_Blank.JPG'), 'x+b')
+    # If this last assertion fails, try temporarily removing your ~/_netrc or ~/.netrc files
 
 # TODO test Pelican integration

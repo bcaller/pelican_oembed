@@ -1,6 +1,7 @@
 # Copyright (c) 2016 Ben Caller
-
+import gzip
 import json
+
 from pelican import signals
 
 from .cachingmarkdownextension import CachingPyEmbedMarkdownExtension
@@ -18,9 +19,9 @@ def add_md_ext(pelican):
     cache = None
     if 'OEMBED_CACHE_FILE' in pelican.settings:
         try:
-            with open(pelican.settings.get('OEMBED_CACHE_FILE')) as json_file:
+            with gzip.open(pelican.settings.get('OEMBED_CACHE_FILE'), 'rt') as json_file:
                 cache = pelican.settings['_OEMBED_CACHE'] = json.load(json_file)
-        except (FileNotFoundError, ValueError):
+        except (FileNotFoundError, ValueError, OSError):
             cache = pelican.settings['_OEMBED_CACHE'] = dict()
 
     # Add extension
@@ -36,7 +37,7 @@ def add_md_ext(pelican):
 
 def save_cache(pelican):
     if 'OEMBED_CACHE_FILE' in pelican.settings:
-        with open(pelican.settings.get('OEMBED_CACHE_FILE'), 'w') as json_file:
+        with gzip.open(pelican.settings.get('OEMBED_CACHE_FILE'), 'wt') as json_file:
             json.dump(pelican.settings.get('_OEMBED_CACHE'), json_file)
 
 
